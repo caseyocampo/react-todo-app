@@ -1,5 +1,3 @@
-import React from "react"
-
 function TodoItem(props) {
     return (
         <div className="todo-item">
@@ -8,7 +6,7 @@ function TodoItem(props) {
                 checked={props.item.completed} 
                 onChange={() => props.handleChange(props.item.id)}
             />
-            <p>{props.item.text}</p>
+            <p style={{display: 'inline', marginLeft: '10px'}}>{props.item.text}</p>
         </div>
     )
 }
