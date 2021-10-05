@@ -1,17 +1,26 @@
 import React from "react"
 import todosData from "./todosData"
-import tvData from "./mapData"
 
 // Components
-import TodoItem from "./TodoItem"
+import TodoItem from "./components/TodoItem"
+import Conditional from './components/Conditional'
 
 class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            todos: todosData
+            todos: todosData,
+            isLoadong: true
         }
         this.handleChange = this.handleChange.bind(this)
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                isLoading: false
+            })
+        }, 1500)
     }
     
     handleChange(id) {
@@ -36,6 +45,9 @@ class App extends React.Component {
 
         return (
           <div>
+              {this.state.isLoading ?
+              <h1>Loading...</h1> :
+              <Conditional />}
             <div className="todo-list">
                 {todoItems}
             </div>
