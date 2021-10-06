@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-todo-app/static/css/main.de509912.chunk.css",
-    "main.js": "/react-todo-app/static/js/main.d380baa2.chunk.js",
-    "main.js.map": "/react-todo-app/static/js/main.d380baa2.chunk.js.map",
+    "main.js": "/react-todo-app/static/js/main.f0fc8f1c.chunk.js",
+    "main.js.map": "/react-todo-app/static/js/main.f0fc8f1c.chunk.js.map",
     "runtime-main.js": "/react-todo-app/static/js/runtime-main.8eac6b7d.js",
     "runtime-main.js.map": "/react-todo-app/static/js/runtime-main.8eac6b7d.js.map",
     "static/js/2.ede329a3.chunk.js": "/react-todo-app/static/js/2.ede329a3.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8eac6b7d.js",
     "static/js/2.ede329a3.chunk.js",
     "static/css/main.de509912.chunk.css",
-    "static/js/main.d380baa2.chunk.js"
+    "static/js/main.f0fc8f1c.chunk.js"
   ]
 }
