@@ -1,12 +1,19 @@
 function TodoItem(props) {
+    const completedStyle ={
+        color: '#757575',
+        textDecoration: 'line-through'
+    }
+
+
     return (
         <div className="todo-item">
             <input 
                 type="checkbox" 
                 checked={props.item.completed} 
                 onChange={() => props.handleChange(props.item.id)}
+                style={{marginRight: '15px'}}
             />
-            <p style={{display: 'inline', marginLeft: '10px'}}>{props.item.text}</p>
+            <span style={props.item.completed ? completedStyle : null}>{props.item.text}</span>
         </div>
     )
 }

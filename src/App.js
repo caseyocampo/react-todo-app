@@ -43,19 +43,24 @@ class App extends React.Component {
     
     render() {
         const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
+
+        const buttonStyle = {
+            background: 'black'
+        }
         
         const buttonText = this.state.isLoggedIn ? "Log Out" : "Log In"
+        
 
         return (
           <div>
               <header>
                   <p id="site-logo">The Las Vegas To Do List</p>
-                  <button id="log-btn" onClick={this.logClick}>{buttonText}</button>
+                  <button id="log-btn" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
               </header>
 
               {this.state.isLoggedIn ?
               <div className="todo-list">
-                  <h1>Logged in</h1>
+                  <h1 style={{marginBottom: '25px'}}>Things To Do</h1>
                 {todoItems}
             </div>:
             <Conditional />}
