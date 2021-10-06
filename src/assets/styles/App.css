@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lato&family=Oswald:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -21,9 +21,9 @@ header {
   align-content: center;
   display: flex;
   justify-content: space-between;
-  margin: 25px auto;
+  margin: 0 auto;
   max-width: 1200px;
-  padding: 1em;
+  padding: 25px 0;
 }
 
 #site-logo {
@@ -38,7 +38,7 @@ header {
   border-radius: 25px;
   color: white;
   font-size: 18px;
-  height: 50px;
+  height: 36px;
   width: 150px;
 }
 
@@ -51,8 +51,15 @@ header {
   border-radius: 5px;
   box-shadow: 0 10px 25px #eee;
   color: #4c3307;
-  margin: 1em auto;
+  margin: 75px auto 1em;
   padding: 3em;
+  max-width: 1200px;
+}
+
+.hero-logged-out {
+  color: #4c3307;
+  margin: 75px auto 1em;
+  padding: 1em;
   max-width: 1200px;
 }
 
@@ -60,7 +67,25 @@ header {
   margin-bottom: 25px;
 }
 
-@media screen and (max-width: 590px) {
+footer {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: flex-start;
+}
+
+footer p {
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 1200px;
+}
+
+@media screen and (max-width: 1199px) {
+  header {
+    padding: 0 1em;
+  }
+
   .todo-list {
     margin: 1em;
   }
