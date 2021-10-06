@@ -109,6 +109,10 @@ footer p {
     line-height: 1;
     margin-bottom: 15px;
   }
+
+  .todo-list {
+    padding: 3em 2em;
+  }
 }
 
 @media screen and (min-width: 590px) {
