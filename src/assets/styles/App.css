@@ -110,3 +110,10 @@ footer p {
     margin-bottom: 15px;
   }
 }
+
+@media screen and (min-width: 590px) {
+  .sign-up-break {
+    content: "\A";
+    white-space: pre;
+  }
+}
