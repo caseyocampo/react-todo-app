@@ -49,10 +49,11 @@ header {
 .todo-list {
   background: papayawhip;
   border-radius: 5px;
-  box-shadow: 0 0 40px 25px #eee;
+  /* box-shadow: 0 0 40px 25px #eee; */
   color: #4c3307;
   height: calc(100vh - 250px);
-  margin: 50px auto;
+  height: auto;
+  margin: 1em auto 10px;
   padding: 3em;
   max-width: 1200px;
 }
@@ -76,18 +77,30 @@ footer {
 }
 
 footer p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0 auto;
-  padding: 0 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
   width: 1200px;
 }
 
 @media screen and (max-width: 1199px) {
   header {
-    padding: 0 1em;
+    padding: 1em;
   }
 
   .todo-list {
     margin: 1em;
+  }
+
+  .site-logo-break {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .logged-out-header {
+    line-height: 1;
+    margin-bottom: 15px;
   }
 }

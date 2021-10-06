@@ -76,7 +76,7 @@ class App extends React.Component {
                 <div style={this.state.isLoggedIn ? null : backgroundStyle}>
 
                 <header>
-                    <p id="site-logo">The Las Vegas To Do List</p>
+                    <p id="site-logo">The Las Vegas <span className="site-logo-break">To Do List</span></p>
                     <button id="log-btn" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
                 </header>
 
