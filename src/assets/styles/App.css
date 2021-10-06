@@ -89,12 +89,16 @@ footer p {
     padding: 1em;
   }
 
-  .todo-list {
-    margin: 1em;
+  #site-logo {
+    margin-top: -7px;
   }
 
   .site-logo-break {
     display: block;
+  }
+
+  .todo-list {
+    margin: 1em;
   }
 }
 
