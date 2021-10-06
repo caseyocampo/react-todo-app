@@ -23,6 +23,16 @@ const todosData = [
         id: 5,
         text: "Something else awesome",
         completed: true
+    },
+    {
+        id: 6,
+        text: "Visit the Hoover Dam",
+        completed: false
+    },
+    {
+        id: 7,
+        text: "Visit Ice Age Fossils State Park",
+        completed: false
     }
 ]
 
