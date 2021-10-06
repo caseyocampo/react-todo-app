@@ -1,6 +1,3 @@
-// Images
-import VegasShadow from '../assets/images/vegas-shadow.jpg'
-
 function Conditional(props) {
     return (
         <div className="hero-logged-out">

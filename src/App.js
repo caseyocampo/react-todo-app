@@ -50,45 +50,48 @@ class App extends React.Component {
 
         const buttonText = this.state.isLoggedIn ? "Log Out" : "Log In"
 
-        const buttonStyle = {
-            background: 'black'
-        }
+        const buttonStyle = { background: 'black' }
 
         const backgroundStyle = {
             backgroundImage: `url(${VegasShadow})`,
-            backgroundPosition: 'contain',
-            height: '100vh'
-            // backgroundRepeat: 'no-repeat'
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            height: 'calc(100vh - 50px)',
+            width: '100%'
         }
 
         const whiteTextStyle = {
+            background: 'black',
             color: 'white'
         }
 
         const blackTextStyle = {
+            background: 'white',
             color: `var(--black)`
         }
-        
 
         return (
-          <div style={this.state.isLoggedIn ? null : backgroundStyle}>
+            <div>
+                <div style={this.state.isLoggedIn ? null : backgroundStyle}>
 
-            <header>
-                <p id="site-logo">The Las Vegas To Do List</p>
-                <button id="log-btn" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
-            </header>
+                <header>
+                    <p id="site-logo">The Las Vegas To Do List</p>
+                    <button id="log-btn" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
+                </header>
 
-            {this.state.isLoggedIn ?
-                <div className="todo-list" style={{backgroundImage: `url(${Vegas})`, backgroundPosition: 'center'}}>
-                    <h1 style={{marginBottom: '25px', fontFamily: 'Oswald, sans-serif'}}>Things To Do</h1>
-                    {todoItems}
-                </div>:
-            <Conditional />}
-            
-            <footer>
-                <p style={this.state.isLoggedIn ? blackTextStyle : whiteTextStyle}>The Las Vegas To Do List | Made by Connor Ocampo</p>
+                {this.state.isLoggedIn ?
+                    <div className="todo-list" style={{backgroundImage: `url(${Vegas})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                        <h1 style={{marginBottom: '25px', fontFamily: 'Oswald,  sans-serif'}}>Things To Do</h1>
+                        {todoItems}
+                    </div>:
+                <Conditional />}
+                </div>
+
+            <footer  style={this.state.isLoggedIn ? blackTextStyle : whiteTextStyle}>
+                <p>The Las Vegas To Do List | Made by Connor Ocampo</p>
             </footer>
-          </div>
+        </div>
         )    
     }
 }

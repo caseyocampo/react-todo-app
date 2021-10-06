@@ -37,7 +37,7 @@ header {
   border: none;
   border-radius: 25px;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   height: 36px;
   width: 150px;
 }
@@ -49,9 +49,10 @@ header {
 .todo-list {
   background: papayawhip;
   border-radius: 5px;
-  box-shadow: 0 10px 25px #eee;
+  box-shadow: 0 0 40px 25px #eee;
   color: #4c3307;
-  margin: 75px auto 1em;
+  height: calc(100vh - 250px);
+  margin: 50px auto;
   padding: 3em;
   max-width: 1200px;
 }
