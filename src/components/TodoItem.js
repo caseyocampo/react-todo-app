@@ -4,7 +4,6 @@ function TodoItem(props) {
         textDecoration: 'line-through'
     }
 
-
     return (
         <div className="todo-item">
             <input 
