@@ -10,17 +10,18 @@ class App extends React.Component {
         super()
         this.state = {
             todos: todosData,
-            isLoadong: true
+            isLoggedIn: false
         }
         this.handleChange = this.handleChange.bind(this)
+        this.logClick = this.logClick.bind(this)
     }
 
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                isLoading: false
-            })
-        }, 1500)
+    logClick() {
+        this.setState(prevState => {
+            return {
+                isLoggedIn: !prevState.isLoggedIn
+            }
+        })
     }
     
     handleChange(id) {
@@ -42,17 +43,24 @@ class App extends React.Component {
     
     render() {
         const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
+        
+        const buttonText = this.state.isLoggedIn ? "Log Out" : "Log In"
 
         return (
           <div>
-              {this.state.isLoading ?
-              <h1>Loading...</h1> :
-              <Conditional />}
-            <div className="todo-list">
-                {todoItems}
-            </div>
-          </div>
+              <header>
+                  <p id="site-logo">The Las Vegas To Do List</p>
+                  <button id="log-btn" onClick={this.logClick}>{buttonText}</button>
+              </header>
 
+              {this.state.isLoggedIn ?
+              <div className="todo-list">
+                  <h1>Logged in</h1>
+                {todoItems}
+            </div>:
+            <Conditional />}
+
+          </div>
         )    
     }
 }

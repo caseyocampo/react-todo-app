@@ -1,6 +1,6 @@
 function Conditional(props) {
     return (
-        <h1 style={{textAlign: 'center', marginTop: '24px'}}>This Todo App is now loaded.</h1>
+        <h1 style={{textAlign: 'center', marginTop: '24px'}}>Logged Out Conditional Component</h1>
     )
 }
 

@@ -1,12 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+:root {
+  --black: #210102;
+  --red: #e50914;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto;
+  max-width: 1200px;
+  padding: 1em;
+}
+
+#site-logo {
+  color: var(--red);
+  font-family: "Anton", sans-serif;
+  font-size: 32px;
+}
+
+#log-btn {
+  background: var(--black);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  height: 50px;
+  width: 150px;
 }
 
 .todo-list {
