@@ -11,7 +11,7 @@ function TodoItem(props) {
                 type="checkbox" 
                 checked={props.item.completed} 
                 onChange={() => props.handleChange(props.item.id)}
-                style={{marginRight: '15px'}}
+                style={{marginRight: '15px', marginLeft: '-30px'}}
             />
             <span style={props.item.completed ? completedStyle : null}>{props.item.text}</span>
         </div>

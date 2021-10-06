@@ -49,11 +49,10 @@ header {
 .todo-list {
   background: papayawhip;
   border-radius: 5px;
-  /* box-shadow: 0 0 40px 25px #eee; */
   color: #4c3307;
   height: calc(100vh - 250px);
   height: auto;
-  margin: 1em auto 10px;
+  margin: 1em auto 5px;
   padding: 3em;
   max-width: 1200px;
 }
@@ -66,6 +65,8 @@ header {
 }
 
 .todo-item {
+  font-size: 18px;
+  margin-left: 30px;
   margin-bottom: 25px;
 }
 
@@ -90,7 +91,8 @@ footer p {
   }
 
   #site-logo {
-    margin-top: -7px;
+    margin-top: -4px;
+    line-height: 1.35;
   }
 
   .site-logo-break {
