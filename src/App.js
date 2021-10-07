@@ -57,12 +57,8 @@ class App extends React.Component {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            height: 'calc(100vh - 50px)',
+            // height: 'calc(100vh - 50px)',
             width: '100%'
-        }
-
-        const loggedInBackgroundStyle = {
-            height: 'auto'
         }
 
         const whiteTextStyle = {
@@ -77,7 +73,7 @@ class App extends React.Component {
 
         return (
             <div>
-                <div style={this.state.isLoggedIn ? loggedInBackgroundStyle : backgroundStyle} className="backgroundImage">
+                <div style={this.state.isLoggedIn ? null : backgroundStyle}>
                     <header>
                         <p id="site-logo">The Las Vegas <span className="site-logo-break">To Do List</span></p>
                         <button id="log-btn" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
@@ -90,7 +86,6 @@ class App extends React.Component {
                         </div>:
                     <Conditional />}
                 </div>
-                
                 
                 <footer style={this.state.isLoggedIn ? blackTextStyle : whiteTextStyle}>
                     <p>Made by Connor Ocampo</p>

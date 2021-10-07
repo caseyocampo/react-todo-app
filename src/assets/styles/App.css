@@ -59,7 +59,8 @@ header {
 
 .hero-logged-out {
   color: #4c3307;
-  margin: 75px auto 1em;
+  height: calc(100vh - 224px);
+  margin: 75px auto 0em;
   padding: 1em;
   max-width: 1200px;
 }
@@ -104,6 +105,12 @@ footer p {
   }
 }
 
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+  .hero-logged-out {
+    height: 700px;
+  }
+}
+
 @media screen and (max-width: 590px) {
   .logged-out-header {
     line-height: 1;
@@ -112,16 +119,6 @@ footer p {
 
   .todo-list {
     padding: 3em 2em;
-  }
-}
-
-@media screen and (max-width: 374px) {
-  .logged-out-header {
-    font-size: 32px !important;
-  }
-
-  .logged-out-description {
-    font-size: 16px !important;
   }
 }
 
