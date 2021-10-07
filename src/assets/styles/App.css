@@ -108,7 +108,7 @@ footer p {
   }
 }
 
-@media (orientation: landscape) {
+@media only screen and (orientation: landscape) {
   .backgroundImage {
     height: 700px !important;
   }
