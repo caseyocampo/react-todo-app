@@ -108,6 +108,12 @@ footer p {
   }
 }
 
+@media (orientation: landscape) {
+  .backgroundImage {
+    height: 700px !important;
+  }
+}
+
 @media screen and (max-width: 590px) {
   .backgroundImage {
     height: 700px !important;
