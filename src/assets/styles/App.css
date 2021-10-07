@@ -105,13 +105,13 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 900px) and (orientation: landscape) {
+@media only screen and (max-width: 813px) and (orientation: landscape) {
   .hero-logged-out {
     height: 600px;
   }
 }
 
-@media only screen and (max-width: 700px) and (orientation: portrait) {
+@media only screen and (max-width: 376px) and (orientation: portrait) {
   .hero-logged-out {
     height: 600px;
   }

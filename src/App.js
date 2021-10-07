@@ -57,19 +57,11 @@ class App extends React.Component {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            // height: 'calc(100vh - 50px)',
             width: '100%'
         }
 
-        const whiteTextStyle = {
-            background: 'black',
-            color: 'white'
-        }
-
-        const blackTextStyle = {
-            background: 'white',
-            color: `var(--black)`
-        }
+        const whiteTextStyle = { background: 'black', color: 'lightgrey' }
+        const blackTextStyle = { background: 'white', color: `var(--black)` }
 
         return (
             <div>
