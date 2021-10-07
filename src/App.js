@@ -57,7 +57,7 @@ class App extends React.Component {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            height: 'calc(100vh - 50px)',
+            // height: 'calc(100vh - 50px)',
             width: '100%'
         }
 
@@ -73,7 +73,7 @@ class App extends React.Component {
 
         return (
             <div>
-                <div style={this.state.isLoggedIn ? null : backgroundStyle}>
+                <div style={this.state.isLoggedIn ? null : backgroundStyle} className="backgroundImage">
 
                 <header>
                     <p id="site-logo">The Las Vegas <span className="site-logo-break">To Do List</span></p>
