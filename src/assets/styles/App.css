@@ -85,9 +85,9 @@ footer p {
   width: 1200px;
 }
 
-.backgroundImage {
+/* .backgroundImage {
   height: calc(100vh - 50px);
-}
+} */
 
 @media screen and (max-width: 1199px) {
   header {
@@ -110,7 +110,7 @@ footer p {
 
 @media screen and (max-width: 590px) {
   .backgroundImage {
-    height: 700px;
+    height: 700px !important;
   }
 
   .logged-out-header {

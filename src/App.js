@@ -57,7 +57,7 @@ class App extends React.Component {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            // height: 'calc(100vh - 50px)',
+            height: 'calc(100vh - 50px)',
             width: '100%'
         }
 
