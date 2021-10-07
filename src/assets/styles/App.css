@@ -85,10 +85,6 @@ footer p {
   width: 1200px;
 }
 
-/* .backgroundImage {
-  height: calc(100vh - 50px);
-} */
-
 @media screen and (max-width: 1199px) {
   header {
     padding: 1em;
@@ -108,17 +104,7 @@ footer p {
   }
 }
 
-@media only screen and (orientation: landscape) {
-  .backgroundImage {
-    height: 700px !important;
-  }
-}
-
 @media screen and (max-width: 590px) {
-  .backgroundImage {
-    height: 700px !important;
-  }
-
   .logged-out-header {
     line-height: 1;
     margin-bottom: 15px;
@@ -126,6 +112,16 @@ footer p {
 
   .todo-list {
     padding: 3em 2em;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .logged-out-header {
+    font-size: 32px !important;
+  }
+
+  .logged-out-description {
+    font-size: 16px !important;
   }
 }
 

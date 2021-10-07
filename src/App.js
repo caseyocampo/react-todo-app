@@ -61,6 +61,10 @@ class App extends React.Component {
             width: '100%'
         }
 
+        const loggedInBackgroundStyle = {
+            height: 'auto'
+        }
+
         const whiteTextStyle = {
             background: 'black',
             color: 'white'
@@ -73,25 +77,25 @@ class App extends React.Component {
 
         return (
             <div>
-                <div style={this.state.isLoggedIn ? null : backgroundStyle} className="backgroundImage">
+                <div style={this.state.isLoggedIn ? loggedInBackgroundStyle : backgroundStyle} className="backgroundImage">
+                    <header>
+                        <p id="site-logo">The Las Vegas <span className="site-logo-break">To Do List</span></p>
+                        <button id="log-btn" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
+                    </header>
 
-                <header>
-                    <p id="site-logo">The Las Vegas <span className="site-logo-break">To Do List</span></p>
-                    <button id="log-btn" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
-                </header>
-
-                {this.state.isLoggedIn ?
-                    <div className="todo-list" style={{backgroundImage: `url(${Vegas})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
-                        <h1 style={{marginBottom: '25px', fontFamily: 'Oswald,  sans-serif'}}>Things To Do</h1>
-                        {todoItems}
-                    </div>:
-                <Conditional />}
+                    {this.state.isLoggedIn ?
+                        <div className="todo-list" style={{backgroundImage: `url(${Vegas})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
+                            <h1 style={{marginBottom: '25px', fontFamily: 'Oswald,  sans-serif'}}>Things To Do</h1>
+                            {todoItems}
+                        </div>:
+                    <Conditional />}
                 </div>
-
-            <footer  style={this.state.isLoggedIn ? blackTextStyle : whiteTextStyle}>
-                <p>Made by Connor Ocampo</p>
-            </footer>
-        </div>
+                
+                
+                <footer style={this.state.isLoggedIn ? blackTextStyle : whiteTextStyle}>
+                    <p>Made by Connor Ocampo</p>
+                </footer>
+            </div>
         )    
     }
 }
