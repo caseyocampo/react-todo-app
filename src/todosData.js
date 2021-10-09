@@ -6,12 +6,12 @@ const todosData = [
     },
     {
         id: 2,
-        text: "Play the slots and win 😃",
+        text: "Play slots and win 😃",
         completed: false
     },
     {
         id: 3,
-        text: "Play the slots and lose 😢",
+        text: "Play slots and lose 😢",
         completed: false
     },
     {

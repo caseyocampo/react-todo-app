@@ -3,7 +3,7 @@ import todosData from "./todosData"
 
 // Components
 import TodoItem from "./components/TodoItem"
-import Conditional from './components/Conditional'
+import LoggedOut from './components/LoggedOut'
 
 // Images
 import Vegas from './assets/images/vegas.jpg'
@@ -49,9 +49,7 @@ class App extends React.Component {
         const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
 
         const buttonText = this.state.isLoggedIn ? "Log Out" : "Log In"
-
         const buttonStyle = { background: 'black' }
-
         const backgroundStyle = {
             backgroundImage: `url(${VegasShadow})`,
             backgroundPosition: 'center',
@@ -60,23 +58,23 @@ class App extends React.Component {
             width: '100%'
         }
 
-        const whiteTextStyle = { background: 'black', color: 'lightgrey' }
         const blackTextStyle = { background: 'white', color: `var(--black)` }
+        const whiteTextStyle = { background: 'black', color: 'lightgrey' }
 
         return (
             <div>
                 <div style={this.state.isLoggedIn ? null : backgroundStyle}>
                     <header>
-                        <p id="site-logo">The Las Vegas <span className="site-logo-break">To Do List</span></p>
-                        <button id="log-btn" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
+                        <p className="header__siteLogo">The Las Vegas <span className="block">To Do List</span></p>
+                        <button class="header__button" onClick={this.logClick} style={this.state.isLoggedIn ? buttonStyle : null}>{buttonText}</button>
                     </header>
 
                     {this.state.isLoggedIn ?
-                        <div className="todo-list" style={{backgroundImage: `url(${Vegas})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
-                            <h1 style={{marginBottom: '25px', fontFamily: 'Oswald,  sans-serif'}}>Things To Do</h1>
+                        <main className="todoList" style={{backgroundImage: `url(${Vegas})`}}>
+                            <h1 className="todoList__title">Things To Do</h1>
                             {todoItems}
-                        </div>:
-                    <Conditional />}
+                        </main>:
+                    <LoggedOut />}
                 </div>
                 
                 <footer style={this.state.isLoggedIn ? blackTextStyle : whiteTextStyle}>

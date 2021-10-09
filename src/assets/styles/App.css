@@ -26,13 +26,13 @@ header {
   padding: 25px 0;
 }
 
-#site-logo {
+.header__siteLogo {
   color: var(--red);
   font-family: "Anton", sans-serif;
   font-size: 32px;
 }
 
-#log-btn {
+.header__button {
   background: var(--red);
   border: none;
   border-radius: 25px;
@@ -42,12 +42,14 @@ header {
   width: 150px;
 }
 
-#log-btn:hover {
+.header__button:hover {
   cursor: pointer;
 }
 
-.todo-list {
+.todoList {
   background: papayawhip;
+  background-position: center;
+  background-size: cover;
   border-radius: 5px;
   color: #4c3307;
   height: calc(100vh - 250px);
@@ -57,7 +59,12 @@ header {
   max-width: 1200px;
 }
 
-.hero-logged-out {
+.todoList__title {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 25px;
+}
+
+.heroLoggedOut {
   color: #4c3307;
   height: calc(100vh - 224px);
   margin: 75px auto 0em;
@@ -65,10 +72,30 @@ header {
   max-width: 1200px;
 }
 
-.todo-item {
+.heroLoggedOut__title {
+  color: var(--red);
+  font-family: "Oswald", sans-serif;
+  font-size: 64px;
+  text-transform: uppercase;
+}
+
+.heroLoggedOut_text {
+  color: white;
+  font-size: 24px;
+  line-height: 1.35;
+  margin-top: 0;
+  max-width: 400px;
+}
+
+.todoItem {
   font-size: 18px;
   margin-left: 30px;
   margin-bottom: 25px;
+}
+
+.todoItem__input {
+  margin-right: 15px;
+  margin-left: -30px;
 }
 
 footer {
@@ -91,45 +118,45 @@ footer p {
     padding: 1em;
   }
 
-  #site-logo {
+  .header__siteLogo {
     margin-top: -4px;
     line-height: 1.35;
   }
 
-  .site-logo-break {
+  .block {
     display: block;
   }
 
-  .todo-list {
+  .todoList {
     margin: 1em 1em 0 1em;
   }
 }
 
 @media only screen and (max-width: 813px) and (orientation: landscape) {
-  .hero-logged-out {
+  .heroLoggedOut {
     height: 600px;
   }
 }
 
 @media only screen and (max-width: 376px) and (orientation: portrait) {
-  .hero-logged-out {
+  .heroLoggedOut {
     height: 600px;
   }
 }
 
 @media screen and (max-width: 590px) {
-  .logged-out-header {
+  .heroLoggedOut__title {
     line-height: 1;
     margin-bottom: 15px;
   }
 
-  .todo-list {
+  .todoList {
     padding: 3em 2em;
   }
 }
 
 @media screen and (min-width: 590px) {
-  .sign-up-break {
+  .heroLoggedOut__mobileBreak {
     content: "\A";
     white-space: pre;
   }
