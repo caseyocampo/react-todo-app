@@ -49,7 +49,10 @@ class App extends React.Component {
         const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
 
         const buttonText = this.state.isLoggedIn ? "Log Out" : "Log In"
+        
         const buttonStyle = { background: 'black' }
+        const blackTextStyle = { background: 'white', color: `var(--black)` }
+        const whiteTextStyle = { background: 'black', color: 'lightgrey' }
         const backgroundStyle = {
             backgroundImage: `url(${VegasShadow})`,
             backgroundPosition: 'center',
@@ -57,9 +60,6 @@ class App extends React.Component {
             backgroundSize: 'cover',
             width: '100%'
         }
-
-        const blackTextStyle = { background: 'white', color: `var(--black)` }
-        const whiteTextStyle = { background: 'black', color: 'lightgrey' }
 
         return (
             <div>
