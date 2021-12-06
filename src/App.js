@@ -78,7 +78,7 @@ class App extends React.Component {
                 </div>
                 
                 <footer style={this.state.isLoggedIn ? blackTextStyle : whiteTextStyle}>
-                    <p>Made by Casey Ocampo</p>
+                    <p>Project Made by Casey Ocampo</p>
                 </footer>
             </div>
         )    
